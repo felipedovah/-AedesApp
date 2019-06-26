@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_salvar"
+        android:icon="@android:drawable/ic_menu_save"
+        android:title="Item"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/item_excluir"
+        android:icon="@android:drawable/ic_delete"
+        android:title="Item"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/item_procurar"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="Item"
+        app:showAsAction="always" />
+</menu>

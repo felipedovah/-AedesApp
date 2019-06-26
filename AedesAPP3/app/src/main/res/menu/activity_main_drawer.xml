@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_ocorrencias"
+            android:icon="@drawable/ic_list_black_24dp"
+            android:title="Cidades com mais denuncias" />
+        <item
+            android:id="@+id/nav_opcoes"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Opções" />
+        <item
+            android:id="@+id/nav_verificar_cidade"
+            android:icon="@android:drawable/ic_lock_power_off"
+            android:title="Sair" />
+    </group>
+
+</menu>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.edu.ifsul.aedesapp">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logoaedes_app"
+        android:label="Aedes App"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activitys.DetalhesActivity"
+            android:parentActivityName=".ViewPager.Inicio"/>
+        <activity
+            android:name=".Opcoes.Opcoes"
+            android:parentActivityName=".ViewPager.Inicio" />
+
+        <service
+            android:name=".Service.ClasseFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCG4Nx0LOJYazCLN-MC8uZubNCqR4ZRvME" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/common_google_signin_btn_icon_dark" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="Aedes APP"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Notificacao"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".adicionar"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ListDenuncias"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".VerificarCidade"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".VaiCidade"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".ViewPager.Inicio">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+
+</manifest>
